@@ -1,3 +1,8 @@
+/**
+ * @author Victoria Carreto Stankiewicz
+ * @version 0.2
+ * Classe on es mostra el menú principal del joc
+ */
 import java.util.Scanner;
 
 public class Menu {

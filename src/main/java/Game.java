@@ -1,5 +1,10 @@
+/**
+ * @author Victoria Carreto Stankiewicz
+ * @version 0.2
+ * Classe on está tot el joc
+ */
+
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -32,8 +37,12 @@ public class Game {
         menu.menuPrincipal();
     }
 
+    /**
+     * Comença el joc
+     * @todo refactoritzar i modular el mètode play
+     * @param tipus
+     */
     public void play(int tipus)  {
-        //pendent per fer: refactoritzar i modular el mètode play
         System.out.println(config);
 
         //crear participant usuari i resta de participants
@@ -77,7 +86,11 @@ public class Game {
 
     }
 
-    //pendent per fer: refactoritzar el codi repetit
+    /**
+     * Selecciona quin tipus de vehicle s'utilitzará
+     * @todo refactoritzar el codi repetit
+     * @param tipus Número del tipus vehicle
+     */
     private void addParticipants(int tipus) {
 
         switch (tipus) {
@@ -98,6 +111,9 @@ public class Game {
         }
     }
 
+    /**
+     * Es mostra el resultat final
+     */
     public void finalResults() {
         //ordenar per punts
         resultatsCursa.sort((o1, o2) -> (int) (o2.vehicle.getPilot().getPunts() - o1.vehicle.getPilot().getPunts()));
@@ -110,10 +126,16 @@ public class Game {
         System.out.println();
     }
 
+    /**
+     * Es borra el resultat
+     */
     public void initResults() {
         resultatsCursa.clear();
     }
 
+    /**
+     * Es posen els participants
+     */
     private void setParticipants() {
         participants[0].setPilot(new Pilot(config.getUserName()));
         resul.vehicle = participants[0];
@@ -127,8 +149,11 @@ public class Game {
         }
     }
 
+    /**
+     * Elimina l'últim classificat
+     * @todo pendent de fer
+     */
     private void eliminarDarrerClassificat() {
-      //pendent  
     }
 
 
